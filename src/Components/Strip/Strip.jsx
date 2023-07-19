@@ -1,27 +1,85 @@
-import React from 'react'
-import './Strip.css'
+import React, { useState } from "react";
+import "./Strip.css";
+import CountUp from "react-countup";
+import ScrollTrigger from "react-scroll-trigger";
 
 export default function Strip() {
+  const [counterOn, setCounterOn] = useState(false)
+
   return (
-    <div className="Strip">
-      <div className="strip-container">
-        <div>
-          <h1>57k +</h1>
-          <p>Users</p>
-        </div>
-        <div>
-          <h1>$2.5B +</h1>
-          <p>Transacted</p>
-        </div>
-        <div>
-          <h1>98%</h1>
-          <p>Customer Satisfaction</p>
-        </div>
-        <div>
-          <h1>30+</h1>
-          <p>Contries</p>
+    <ScrollTrigger
+      onEnter={() => setCounterOn(true)}
+      onExit={() => setCounterOn(false)}
+    >
+      <div className="Strip">
+        <div className="strip-container">
+          <div>
+            {counterOn &&
+              <CountUp
+                start={0.0}
+                end={5.7}
+                duration={2}
+                separator=" "
+                decimals={1}
+                decimal="."
+                prefix="$"
+                suffix="K+"
+                className="strip-number"
+              />
+            }
+            <p>Users</p>
+          </div>
+          <div>
+            {counterOn &&
+              <CountUp
+                start={0.0}
+                end={2.5}
+                duration={3}
+                separator=" "
+                decimals={1}
+                decimal="."
+                prefix="$"
+                suffix="B+"
+                className="strip-number"
+              />
+            }
+            <p>Transacted</p>
+          </div>
+          <div>
+            {counterOn &&
+              <CountUp
+                start={0}
+                end={98}
+                duration={4}
+                separator=" "
+                decimals={0}
+                decimal="."
+                prefix=""
+                suffix="%"
+                className="strip-number"
+              />
+            }
+            <p>Customer Satisfaction</p>
+          </div>
+            
+          <div>
+            {counterOn &&
+              <CountUp
+                start={0}
+                end={30}
+                duration={5}
+                separator=" "
+                decimals={0}
+                decimal="."
+                prefix=""
+                suffix="+"
+                className="strip-number"
+              />
+            }
+            <p>Contries</p>
+          </div>
         </div>
       </div>
-    </div>
+    </ScrollTrigger>
   );
 }

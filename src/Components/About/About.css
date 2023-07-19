@@ -27,6 +27,7 @@
   align-items: center;
   justify-content: center;
 }
+
 .about-sect-box p {
   font-size: 30px;
   font-weight: 300;
@@ -36,4 +37,25 @@
 }
 .about-text-right {
   text-align: right;
+}
+
+@media only screen and (max-width: 900px) {
+  .About{
+    height: 400vh;
+  }
+  .about-sect-cont {
+    flex-direction: column;
+    
+  }
+  .about-sect-box {
+    width: 100%;
+  }
+
+  .about-sect-box p {
+    text-align: left;
+    font-size: 25px;
+  }
+  .varient-box{
+    flex-direction: column-reverse;
+  }
 }

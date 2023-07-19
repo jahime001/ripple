@@ -1,19 +1,27 @@
 import React, { useEffect } from "react";
 import './Home.css'
 import Strip from "../Strip/Strip";
+import { motion } from "framer-motion";
+
 export default function Home() {
 
     
   return (
     <div className="Home">
-      <div className="home-container">
+      <motion.div
+        className="home-container"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.0 }}
+      >
         <div className="home-fade"></div>
         <div className="home-header">
-          <h1>
+          <motion.h1
+          >
             Empowering businesses
             <br />
             financially.
-          </h1>
+          </motion.h1>
         </div>
         <div className="home-body">
           <p>
@@ -25,7 +33,7 @@ export default function Home() {
           <button className="home-footer-button1">Try Free</button>
           <button className="home-footer-button2">Learn More</button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
