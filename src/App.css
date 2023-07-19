@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--background);
+  color: white;
+  transition: .5s;
 }
 
 .App-logo {

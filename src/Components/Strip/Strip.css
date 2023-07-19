@@ -1,0 +1,49 @@
+.Strip{
+    height: 20vh;
+    width: 100%;
+    background-color: rgba(26, 24, 28, 0.128);
+}
+
+.strip-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.strip-container div{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.strip-container div h1{
+    margin: 0;
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+    .Strip{
+    height: 50vh;
+}
+
+.strip-container{
+    height: 100%;
+    width: 100%;
+    display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+}
+.strip-container div{
+    height: 100%;
+    width: 100%;
+}
+.strip-container div h1{
+    font-size: 40px;
+}
+}
