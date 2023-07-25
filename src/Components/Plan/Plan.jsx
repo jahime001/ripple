@@ -21,7 +21,10 @@ let currentWidth = window.innerWidth;
     const isSticky = () => {
       /* Method that will fix header after a specific scrollable */
       const scrollTop = window.scrollY;
-      const stickyClass = scrollTop >= 6215 && currentWidth < 600 ? "is-sticky" : "";
+      const stickyClass =
+        scrollTop >= 6215 && scrollTop < 7800 && currentWidth < 600
+          ? "is-sticky"
+          : "";
       setSticky(stickyClass);
       console.log(stickyClass);
     };

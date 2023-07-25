@@ -123,6 +123,7 @@
 .footer-bottom h4 {
   color: #969696;
   font-weight: 300;
+
 }
 
 .lower-footer {
@@ -176,4 +177,24 @@
   .footer-links li {
   padding: none;
 }
+.footer-bottom{
+  display: flex;
+  flex-direction: column;
+}
+.footer-logos{
+  justify-content: center;
+  width: 100%;
+}
+}
+
+.footer-logos{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer-logo{
+height: 50px;
+padding: 0 10px 0 10px;
 }
