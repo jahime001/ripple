@@ -253,8 +253,9 @@ ul{
 }
 
 .plan-card-button:hover {
-  background-color: rgb(77, 77, 77);
+  background-color: var(--background);
   transition-duration: .2s;
+  color: var(--accent);
 }
 
 .button:hover .arrow {

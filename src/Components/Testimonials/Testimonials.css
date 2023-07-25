@@ -1,19 +1,19 @@
-.Testimonials{
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid rgb(30, 0, 255); */
+.Testimonials {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid rgb(30, 0, 255); */
 }
 
-.testimonials-container{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid red; */
+.testimonials-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
 }
 
 .testi-card {
@@ -21,8 +21,11 @@
   padding: 2rem;
   max-width: 320px;
   border-radius: 10px;
-  box-shadow: 0 20px 30px -20px rgb(255, 255, 255);
-  height: 15rem;
+  /* box-shadow: 0 20px 30px -20px rgb(255, 255, 255); */
+  height: 20rem;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .testi-header {
@@ -76,15 +79,11 @@
 }
 
 @media only screen and (max-width: 900px) {
-    .testemonials-container{
-        width: 90%;
-    }
+  .testemonials-container {
+    width: 90%;
+  }
 }
 
-.carousel-container{
-  max-width: 1300px;
-  /* border: 1px solid red; */
-  /* border: 1px solid; */
-
-}
-
+.carousel-container {
+  width: 90%;
+ }

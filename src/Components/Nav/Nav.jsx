@@ -77,7 +77,6 @@ export default function Nav({ theme, toggleTheme }) {
           </div>
           <div className="nav-action">
             <h3>Sign Up</h3>
-            <button className="nav-action-button">Contact</button>
           </div>
         </Headroom>
       </div>

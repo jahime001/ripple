@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./Plan.css";
 import Starter from "../Sub";
+import { motion, useInView, useAnimation } from "framer-motion";
+
+
 export default function Plan() {
     const [checked, setChecked] = React.useState(false);
     const [sticky, setSticky] = useState("");
@@ -18,7 +21,7 @@ let currentWidth = window.innerWidth;
     const isSticky = () => {
       /* Method that will fix header after a specific scrollable */
       const scrollTop = window.scrollY;
-      const stickyClass = scrollTop >= 1615 && currentWidth < 600 ? "is-sticky" : "";
+      const stickyClass = scrollTop >= 6215 && currentWidth < 600 ? "is-sticky" : "";
       setSticky(stickyClass);
       console.log(stickyClass);
     };
@@ -26,14 +29,23 @@ let currentWidth = window.innerWidth;
     if (currentWidth > 600) { 
         
     }
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
 
   return (
     <div className="Plan">
       <div className="plan-container">
         <div className={`plan-header`}>
           <h1>
-            Unlock Your Business Potential with<br/> Our Exclusive Subscription
-            Options!
+            Unlock Your Business Potential with
+            <br /> Our Exclusive Subscription Options!
           </h1>
           <div className={`plan-switch ${sticky}`}>
             <h3
@@ -60,9 +72,18 @@ let currentWidth = window.innerWidth;
           </div>
         </div>
         <div className="plan-body">
-          <div className="plan-body-container">
+          <div className="plan-body-container" ref={ref}>
             {/* BASIC CARD */}
-            <div className="plan-card">
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 100 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="plan-card"
+            >
               <div className="plan-card-header">
                 <h2>Basic</h2>
                 <p>
@@ -189,9 +210,18 @@ let currentWidth = window.innerWidth;
                   <div className="arrow">›</div>
                 </button>
               </div>
-            </div>
+            </motion.div>
             {/* PRO CARD */}
-            <div className="plan-card">
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 100 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.7, delay: 0.4 }}
+              className="plan-card"
+            >
               <div className="plan-card-header middle">
                 <h2>Pro</h2>
                 <p>
@@ -318,9 +348,18 @@ let currentWidth = window.innerWidth;
                   <div className="arrow">›</div>
                 </button>
               </div>
-            </div>
+            </motion.div>
             {/* ENTERPRISE CARD */}
-            <div className="plan-card">
+            <motion.div
+              variants={{
+                hidden: { opacity: 0, y: 100 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              initial="hidden"
+              animate={mainControls}
+              transition={{ duration: 0.7, delay: 0.6 }}
+              className="plan-card"
+            >
               <div className="plan-card-header">
                 <h2>Enterprise</h2>
                 <p>
@@ -447,7 +486,7 @@ let currentWidth = window.innerWidth;
                   <div className="arrow">›</div>
                 </button>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

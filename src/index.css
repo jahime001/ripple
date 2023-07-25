@@ -25,6 +25,8 @@ code {
   --accent: #3e5df7;
 }
 [data-theme='light'] {
+  /* --background: #ffffff;
+  --accent-background: #F0F0F0; */
   --background: #F0F0F0;
   --accent-background: rgb(255, 255, 255);
   --layer-background: rgb(240, 240, 255);

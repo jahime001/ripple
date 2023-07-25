@@ -1,8 +1,8 @@
 .Nav{
-
+color: var(--text-primary);
 }
 .headroom--pinned{
-   background: var(--nav-background);
+   background: var(--background);
     backdrop-filter: saturate(100%) blur(20px);
     position: fixed;
   transform: translateY(0%);
@@ -32,6 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 .headroom--unfixed {
   position: relative;
@@ -91,9 +92,9 @@
  position: relative;
  overflow: hidden;
  font-size: 19px;
- color: rgb(0, 0, 0);
+ color: var(-text-primary);;
  z-index: 1;
- background-color: #ffffff;
+ background-color: var(--accent-background);
  width: 100px;
  height: 40px;
  border: none;
@@ -112,6 +113,7 @@ background-color: white;
 }
 .nav-bar p:hover{
 cursor: pointer;
+content: var(--accent);
 }
 
 @media only screen and (max-width: 900px) {

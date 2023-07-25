@@ -26,6 +26,7 @@
   background-color: var(--accent-background);
   max-width: 1300;
   box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.05);
+  max-width: 1200px;
 }
 
 .footer-input-group {
