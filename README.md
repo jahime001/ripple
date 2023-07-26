@@ -42,8 +42,8 @@ Check out the live demo of the Ripple Landing Page [here](https://ripple-alpha.v
 
 To set up this project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/ripple-landing-page.git`
-2. Navigate to the project directory: `cd ripple-landing-page`
+1. Clone the repository: `git clone git@github.com:jahime001/ripple.git`
+2. Navigate to the project directory: `cd ripple`
 3. NPM Start to Launch.
 
 ## Usage
