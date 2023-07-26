@@ -2,26 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./Nav.css";
 import logo from "./ripple.png";
 import { Divide as Hamburger } from "hamburger-react";
-import { ThemeContext } from "../../App";
 import Headroom from "react-headroom";
 import { AnimatePresence, motion, useCycle } from "framer-motion";
 export default function Nav({ theme, toggleTheme }) {
   let currentWidth = window.innerWidth;
-  const [isOpen, setOpen] = useState(false);
-  // const {theme, setTheme} = ThemeContext
 
-  // const MenuItems = () => (
-  //   <div className={`nav-menu ${isOpen ? "open" : ""}`}>
-  //     <ul>
-  //       <li>Home</li>
-  //       <li>About</li>
-  //       <li>Pricing</li>
-  //       <li>Blog</li>
-  //       <li>Careers</li>
-  //       <li></li>
-  //     </ul>
-  //   </div>
-  // );
   const links = [
     { name: "Home", to: "#", id: 1 },
     { name: "About", to: "#", id: 2 },
